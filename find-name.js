@@ -12,7 +12,11 @@
 const data = [{ name: 'ale' }, {name: 'mapita'}]
 
 function finder(data, name) {
-    return data.filter((data, name) => ({data.name: name}))
+    const searchResult = data.filter(data => data.name === name)
+    if(searchResult.length === 0){
+        return "not found"
+    } 
+    return "found";
 }
  
 const result = finder(data, 'ale');
